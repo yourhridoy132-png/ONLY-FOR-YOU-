@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2a103e">
+<title>একটা কথা ছিল… 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--pink:#ff75ad;--gold:#ffe1a1;--lilac:#c9a8ff;--white:#fff7fc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 14px;display:grid;place-items:center;overflow-x:hidden;color:var(--white);font-family:'Hind Siliguri',sans-serif;background:radial-gradient(circle at 15% 15%,#ff5b9b66,transparent 32%),radial-gradient(circle at 90% 20%,#8660ff66,transparent 32%),linear-gradient(145deg,#160b2b,#421344 58%,#1c1038);background-attachment:fixed}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:26px 26px}
+.wrap{width:min(100%,520px);position:relative;z-index:1}
+.top{display:flex;justify-content:space-between;gap:10px;margin:0 5px 12px;color:#f8d9ee;font-size:12px;letter-spacing:.5px}
+.pill{border:1px solid #ffffff40;background:#ffffff12;border-radius:30px;padding:5px 10px}
+.card{padding:1.5px;border-radius:30px;background:linear-gradient(130deg,#fff9,#ff77b8,#b69aff,#ffe1a1);box-shadow:0 25px 80px #09001899,0 0 40px #ff64ae33}
+.panel{position:relative;overflow:hidden;min-height:590px;padding:28px 22px 22px;text-align:center;border-radius:29px;background:linear-gradient(145deg,#35134feF,#241039f5 55%,#4a1946f2)}
+.panel:before,.panel:after{content:"";position:absolute;border-radius:50%;filter:blur(30px);pointer-events:none}
+.panel:before{width:220px;height:220px;right:-120px;top:-130px;background:#ff6cad55}
+.panel:after{width:220px;height:220px;left:-130px;bottom:-140px;background:#8b75ff55}
+.content{position:relative;z-index:1}
+.brand{font-size:12px;letter-spacing:2px;color:#ffd6e9}
+.art{width:88px;height:88px;margin:18px auto;border-radius:27px;display:grid;place-items:center;font-size:43px;background:linear-gradient(135deg,#ff79b7,#a47bff 60%,#ffd28a);box-shadow:0 12px 35px #ff64ae55;transform:rotate(-5deg)}
+h1{font:700 clamp(30px,8vw,43px)/1.2 'Hind Siliguri',sans-serif;margin:0 0 12px}
+.grad{background:linear-gradient(90deg,#ffb8d8,#ffe4a5,#d2bcff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{max-width:390px;margin:0 auto 16px;color:#eadcf8;font-size:15px;line-height:1.9}
+.quote{margin:18px 0;padding:15px;border:1px solid #ffffff2d;border-radius:18px;background:linear-gradient(110deg,#ff77b51c,#9d83ff22,#ffc36b14);color:#fff1fa;font-size:16px;line-height:1.8}
+.question{font-size:18px;font-weight:700;margin:20px 0 12px}
+.buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:62px;position:relative}
+.btn{min-width:125px;min-height:50px;padding:11px 18px;border:1px solid #ffffff55;border-radius:15px;background:#ffffff14;color:white;font:700 15px 'Hind Siliguri',sans-serif;cursor:pointer;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+.yes{color:#39163f;border:0;background:linear-gradient(100deg,#ffb1d3,#ffe09b 52%,#c5aaff);box-shadow:0 9px 25px #ff70b044}
+.no{position:relative}
+.small{margin:14px 0 0;color:#d5c1e7;font-size:12px}
+.page{display:none;animation:appear .6s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.back{margin-top:16px;border:0;background:transparent;color:#eac9ff;font:600 13px 'Hind Siliguri';cursor:pointer;text-decoration:underline}
+.footer{margin-top:22px;color:#d7bce9;font-size:11px;letter-spacing:1px}
+#loading{display:none;position:fixed;inset:0;z-index:20;place-items:center;text-align:center;background:radial-gradient(circle,#63204f,#190c31 75%);padding:25px}
+.loader-heart{font-size:70px;display:inline-block;animation:heartbeat .8s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.28)}}
+.loading-text{font-size:20px;margin-top:18px;color:#ffe2f0}
+.loading-sub{font-size:13px;color:#e6c9ef;margin-top:7px}
+#loading:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 0 25%,#ff83bd13 26% 100%);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(1.08)}}
+.couple{width:100%;max-width:340px;margin:15px auto 20px;display:block;border-radius:22px;overflow:hidden;box-shadow:0 12px 40px #08001488;border:1px solid #ffffff40}
+.result{font-size:15px;line-height:1.9;color:#f5e7f7;max-width:400px;margin:12px auto}
+.float{position:fixed;bottom:-40px;z-index:30;pointer-events:none;animation:rise linear forwards;filter:drop-shadow(0 0 9px #ff8bc4)}
+@keyframes rise{to{transform:translateY(-115vh) rotate(45deg);opacity:0}}
+@media(max-width:390px){.panel{padding:24px 16px 20px;min-height:570px}.btn{min-width:112px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+ <div class="top"><span>✦ হৃদয়ের ছোট্ট একটি কথা</span><span class="pill">শুধু তোমার জন্য 💌</span></div>
+ <div class="card"><div class="panel"><div class="content">
+  <section id="start">
+   <div class="brand">একটু মন দিয়ে পড়ো…</div><div class="art">💌</div>
+   <h1>তোমাকে <span class="grad">কিছু বলতে চাই</span></h1>
+   <p class="lead">অনেক কথার ভিড়ে কিছু অনুভূতি থাকে, যেগুলো মুখে বলা সহজ নয়। তাই তোমার জন্য ছোট্ট করে এই আয়োজন।</p>
+   <div class="quote">“তোমার সাথে কথা বলার পর থেকেই সাধারণ দিনগুলোও একটু বেশি সুন্দর মনে হয়।” ✨</div>
+   <p class="question">একটা প্রশ্ন করতে পারি?</p>
+   <button class="btn yes" onclick="show('ask')">হ্যাঁ, বলো 💗</button>
+   <p class="small">সময় নিয়ে পড়ো… কোনো তাড়া নেই।</p>
+  </section>
+  <section class="page" id="ask">
+   <div class="brand">মনের কথা, একদম সত্যি</div><div class="art">🌷</div>
+   <h1><span class="grad">তুমি আমার</span><br>দিনের সুন্দর অংশ</h1>
+   <p class="lead">তোমার হাসি, তোমার কথা—ছোট ছোট বিষয়গুলোও আমার কাছে অনেক স্পেশাল। আমি চাই, আমরা একে অপরকে বুঝে, সম্মান করে সুন্দর কিছু স্মৃতি তৈরি করি।</p>
+   <div class="quote">আমি নিখুঁত কোনো গল্পের প্রতিশ্রুতি দিচ্ছি না; শুধু চাই, গল্পটা হোক যত্ন, বিশ্বাস, সম্মান আর অনেক ভালোবাসায় ভরা। ❤️</div>
+   <p class="question">তুমি কি আমার ভালোবাসার মানুষ হবে? 🥺</p>
+   <div class="buttons">
+    <button class="btn yes" onclick="sayYes()">হ্যাঁ 💖</button>
+    <button class="btn no" id="noBtn" onmouseenter="moveNo()" ontouchstart="moveNo()" onclick="moveNo()">না 🙈</button>
+   </div>
+   <p class="small">তোমার সিদ্ধান্তই আমার কাছে গুরুত্বপূর্ণ। 🤍</p>
+   <button class="back" onclick="show('start')">← আগের পেজে যাও</button>
+  </section>
+  <section class="page" id="yes">
+   <div class="brand">আমাদের নতুন শুরুর গল্প</div><div class="result-icon" style="font-size:55px;margin:12px">💞</div>
+   <h1><span class="grad">তুমি রাজি হয়েছো!</span></h1>
+   <svg class="couple" viewBox="0 0 680 390" role="img" aria-label="রোমান্টিক সূর্যাস্তে পাশাপাশি দাঁড়িয়ে থাকা এক জুটি">
+    <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#32124e"/><stop offset=".5" stop-color="#e65b86"/><stop offset="1" stop-color="#ffbd8a"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#a83f75"/><stop offset="1" stop-color="#28133f"/></linearGradient></defs>
+    <rect width="680" height="390" fill="url(#sky)"/><circle cx="340" cy="185" r="85" fill="#ffe3a4" opacity=".9"/><path d="M0 250 Q150 220 300 250 T680 245 V390 H0Z" fill="url(#water)"/><path d="M0 275 Q170 260 340 278 T680 270" stroke="#ffd2a5" stroke-width="4" opacity=".55" fill="none"/><path d="M0 310 Q180 294 350 312 T680 305" stroke="#ffb2b7" stroke-width="3" opacity=".45" fill="none"/>
+    <g fill="#21132f"><path d="M270 390 Q275 315 295 280 Q310 260 330 280 Q345 310 348 390Z"/><circle cx="310" cy="248" r="25"/><path d="M345 390 Q348 315 375 275 Q390 260 407 281 Q425 315 428 390Z"/><circle cx="385" cy="246" r="24"/><path d="M294 285 Q345 300 382 285" stroke="#21132f" stroke-width="18" fill="none" stroke-linecap="round"/></g>
+    <g fill="#fff0db" opacity=".8"><path d="M75 90 q10 -20 20 0 q20 10 0 20 q-10 20 -20 0 q-20 -10 0 -20Z"/><path d="M560 115 q8 -16 16 0 q16 8 0 16 q-8 16 -16 0 q-16 -8 0 -16Z"/></g>
+   </svg>
+   <p class="result">আজকের এই ছোট্ট “হ্যাঁ” আমার কাছে অনেক বড় আনন্দের। তোমার সাথে হাসি, গল্প, অভিমান আর সুন্দর সুন্দর স্মৃতি জমাতে চাই। সবকিছু হোক ধীরে ধীরে—বিশ্বাস আর যত্ন দিয়ে। 🥹💗</p>
+   <div class="quote">“তুমি পাশে থাকলে, সাধারণ মুহূর্তও আমার কাছে বিশেষ হয়ে যায়।” 🌙</div>
+   <p class="small">— শুধু তোমার জন্য, অনেক ভালোবাসা ❤️</p>
+   <button class="btn yes" onclick="celebrate()">এই মুহূর্তটা উদযাপন করি ✨</button>
+  </section>
+ </div></div></div>
+ <div class="footer">Made with love & a little sparkle ✦</div>
+</main>
+<div id="loading"><div><div class="loader-heart">💗</div><div class="loading-text">তোমার জন্য ভালোবাসার মুহূর্ত সাজাচ্ছি…</div><div class="loading-sub">একটু অপেক্ষা করো 🌸</div></div></div>
+<script>
+function show(id){document.querySelectorAll('#start,.page').forEach(s=>s.style.display='none');document.getElementById(id).style.display='block';}
+function sayYes(){
+ const loader=document.getElementById('loading');loader.style.display='grid';
+ for(let i=0;i<14;i++)setTimeout(floatHeart,i*90);
+ setTimeout(()=>{loader.style.display='none';show('yes');for(let i=0;i<28;i++)setTimeout(floatHeart,i*65);},2600);
+}
+function moveNo(){
+ const b=document.getElementById('noBtn');
+ const maxX=Math.max(35,Math.min(170,window.innerWidth/2-70));
+ const maxY=90;
+ b.style.transform=`translate(${Math.round((Math.random()-.5)*maxX*2)}px,${Math.round((Math.random()-.5)*maxY*2)}px)`;
+}
+function floatHeart(){const h=document.createElement('span');h.className='float';h.textContent=['💗','♡','✨','🌸','💖','💕'][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*24)+'px';h.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),8500);}
+function celebrate(){for(let i=0;i<55;i++)setTimeout(floatHeart,i*45);}
+</script>
+</body>
+</html>
